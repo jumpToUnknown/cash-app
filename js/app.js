@@ -6,7 +6,7 @@ function getData(form) {
     jsonData[key] = value;
   });
 
-  const previousDataArray = [...JSON.parse(localStorage.getItem('formData'))];
+  const previousDataArray = localStorage.getItem('formData') ? [...JSON.parse(localStorage.getItem('formData'))] : [];
 
   previousDataArray.push(jsonData)
 
